@@ -1,0 +1,47 @@
+.wrapper{
+
+}
+.backLink{
+    position: fixed;
+    font-size: 30px;
+    font-weight: normal;
+}
+.planeHeading{
+    border-radius: 7px 7px 0 0 ;
+    background-color: #ffffff;
+    background-position: center center;
+    border-color: #ffffff;
+    border-style: solid;
+    font-weight: 400;
+    margin-bottom: -4px;
+    z-index: 999;
+}
+.planeHeading>p{
+    margin: 0;
+}
+.planeInfo{
+    /*padding;*/
+    font-weight: 400;
+}
+.planeInfo:nth-child(odd){
+    background-color: #e8f7ff;
+}
+.planeInfo:nth-child(even){
+    background-color: #c2eaff;
+}
+.planeInfo:last-child {
+    border-radius: 0 0 8px 8px;
+}
+.planeInfoReg{
+
+}
+.planeInfoLink{
+    float: right;
+    font-weight: 600;
+}
+.planeInfoLink>a, .planeInfoReg>a{
+    color: black;
+}
+.planeInfoLink>a:hover, .planeInfoReg>a:hover{
+    color: black;
+}

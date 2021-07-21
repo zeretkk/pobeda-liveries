@@ -1,13 +1,35 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {mainContext} from "./context";
+
+function AppProvider(){
+    const [lang, setLang] = useState()
+    const setDefaultLang =()=>{
+        let locallang = localStorage.getItem('lang')
+        if (locallang){
+            setLang(locallang)
+        }else {
+            localStorage.setItem('lang', 'RU')
+            setLang('RU')
+        }
+    }
+    useEffect(()=>{setDefaultLang()},
+        //eslint-disable-next-line
+        [])
+    return(
+        <React.StrictMode>
+            <mainContext.Provider value={{lang, setLang}}>
+                <App />
+            </mainContext.Provider>
+        </React.StrictMode>
+    )
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <AppProvider/>,
   document.getElementById('root')
 );
 

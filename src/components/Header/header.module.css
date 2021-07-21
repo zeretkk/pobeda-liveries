@@ -1,5 +1,5 @@
 .wrapper{
-    position: absolute;
+    position: fixed;
     z-index: 999;
     background: rgba(0, 0 ,0, 0.35);
 }
@@ -16,4 +16,45 @@
 .navLinksItem{
     padding: 0 15px;
 }
+.disabled{
+    pointer-events: none;
+    cursor: default
+}
+.dropdown{
+    display: none;
+    float: right;
+}
+.dropdownIcon{
+    color: white;
+    font-size: 40px;
 
+}
+.dropdownLinks{
+    position: absolute;
+    left: 0;
+    background: rgba(0, 0 ,0, 0.35);
+    width: 100%;
+    margin-top: 4px;
+}
+.dropdownLinksItem{
+    width: 100%;
+    display: block;
+    font-size: 25px;
+    text-align: center;
+}
+.langSwitcher{
+    cursor: pointer;
+    padding: 0 11px;
+    border-left: 4px white solid;
+}
+@media (max-width: 768px) {
+    .navLinks{
+        display: none !important;
+    }
+    .dropdown{
+        display: inline-block;
+    }
+    .brandImage{
+        padding-top: 10px;
+    }
+}
