@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import {BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import NFpage from "./components/404/NFpage";
-import {useEffect, useState} from "react";
+
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
                           <Route exact path={'/'}>
                               <Redirect to={'/liveries'}/>
                           </Route>
-                          <Route exact path={'/liveries/'}>
+                          <Route path={'/liveries/'}>
                               <LiveryLayout/>
                           </Route>
                           <Route path={['/rules', '/home', '/staff', '/pilots', '/routes', '/home']}>

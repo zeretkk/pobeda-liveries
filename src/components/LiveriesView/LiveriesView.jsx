@@ -21,7 +21,7 @@ export default function LiveriesView(props) {
                                             </span>
                                                 <span className={classes.planeInfoLink}>
                                                     {e.download!=='/'?<a rel='noreferrer' target='_blank' href={e.download}>Download</a>
-                                                        :console.log(e.reg, e.download)
+                                                        :null
                                                     }
                                             </span>
                                             </div>
