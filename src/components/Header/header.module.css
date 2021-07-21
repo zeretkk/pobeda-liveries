@@ -1,0 +1,19 @@
+.wrapper{
+    position: absolute;
+    z-index: 999;
+    background: rgba(0, 0 ,0, 0.35);
+}
+.brand{
+
+}
+.brandImage{
+    max-width: 170px;
+}
+.navLinks{
+    line-height: 2.3;
+}
+
+.navLinksItem{
+    padding: 0 15px;
+}
+
