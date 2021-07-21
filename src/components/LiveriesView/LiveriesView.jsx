@@ -2,7 +2,6 @@ import {xplane, fsx} from "./allLiveries";
 import classes from './liveriesview.module.css'
 import {NavLink} from "react-router-dom";
 export default function LiveriesView(props) {
-    console.log(props)
     return (
         <div>
             <div className={`container ${classes.wrapper}`}>
