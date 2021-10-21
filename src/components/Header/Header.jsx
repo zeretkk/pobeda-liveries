@@ -5,6 +5,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {useContext, useState} from "react";
 import {mainContext} from "../../context";
+import {Col, Container, Row} from "react-bootstrap";
 
 function LangSwitcher(){
     const {lang, setLang} = useContext(mainContext)
@@ -49,16 +50,16 @@ function DropDown() {
 export default function Header() {
     const {lang} = useContext(mainContext)
     return (
-        <div className={`container-fluid ${classes.wrapper} py-1 px-5`}>
-            <div className="row">
-                <div className="col">
+        <Container fluid={true} className={`${classes.wrapper} py-2 px-5 text-light`}>
+            <Row>
+                <Col>
                     <NavLink to ={'/liveries'}>
                         <img className={classes.brandImage} src={logo} alt=""/>
                     </NavLink>
-                </div>
-                <div className="col">
+                </Col>
+                <Col>
                     <DropDown/>
-                    <nav className={`${classes.navLinks} d-flex justify-content-end `}>
+                    <nav className={`${classes.navLinks} d-flex justify-content-end`}>
                         <NavLink className={`${classes.navLinksItem}`} to="/home">  {lang==='RU'?"Главная":"Home"}     </NavLink>
                         <NavLink className={`${classes.navLinksItem}`} to="/rules"> {lang==='RU'?'Правила':'Rules'}    </NavLink>
                         <NavLink className={`${classes.navLinksItem}`} to="/staff"> {lang==='RU'?'Руководство':'Staff'} </NavLink>
@@ -68,8 +69,8 @@ export default function Header() {
                         <LangSwitcher/>
                     </nav>
 
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     )
 }

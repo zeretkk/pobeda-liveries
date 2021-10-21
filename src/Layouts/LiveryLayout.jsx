@@ -1,4 +1,4 @@
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import SimSelect from "../components/SimSelector/SimSelect";
 import {Route} from "react-router-dom";
 import LiveriesView from "../components/LiveriesView/LiveriesView";
